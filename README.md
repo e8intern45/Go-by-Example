@@ -1,1 +1,1 @@
-# Go-by-Examples
+$ go run hello-world.go
