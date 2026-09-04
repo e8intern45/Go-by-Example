@@ -4,35 +4,37 @@ import "fmt"
 
 func main() {
 
-    var a [5]int
-    fmt.Println("emp:", a)
+	var fruits [4]string
+	fmt.Println("emp:", fruits)
 
-    a[4] = 100
-    fmt.Println("set:", a)
-    fmt.Println("get:", a[4])
+	fruits[0] = "Apple"
+	fruits[3] = "Mango"
+	fmt.Println("set:", fruits)
+	fmt.Println("get:", fruits[3])
 
-    fmt.Println("len:", len(a))
+	fmt.Println("len:", len(fruits))
 
-    b := [5]int{1, 2, 3, 4, 5}
-    fmt.Println("dcl:", b)
+	scores := [5]int{10, 20, 30, 40, 50}
+	fmt.Println("dcl:", scores)
 
-    b = [...]int{1, 2, 3, 4, 5}
-    fmt.Println("dcl:", b)
+	colors := [...]string{"Red", "Green", "Blue"}
+	fmt.Println("dcl:", colors)
 
-    b = [...]int{100, 3: 400, 500}
-    fmt.Println("idx:", b)
+	sparse := [...]int{10, 2: 50, 90}
+	fmt.Println("idx:", sparse)
 
-    var twoD [2][3]int
-    for i := range 2 {
-        for j := range 3 {
-            twoD[i][j] = i + j
-        }
-    }
-    fmt.Println("2d: ", twoD)
+	var matrix [3][2]int
+	for row := range 3 {
+		for col := range 2 {
+			matrix[row][col] = (row + 1) * (col + 1)
+		}
+	}
+	fmt.Println("2d: ", matrix)
 
-    twoD = [2][3]int{
-        {1, 2, 3},
-        {1, 2, 3},
-    }
-    fmt.Println("2d: ", twoD)
+	matrix = [3][2]int{
+		{5, 10},
+		{15, 20},
+		{25, 30},
+	}
+	fmt.Println("2d: ", matrix)
 }
